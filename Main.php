@@ -7,10 +7,13 @@ $message = 'ようこそ s12001 さん';
 read();
 
 if (isset($_POST['button'])) {
-	$button = htmlspecialchars($_POST['button'], ENT_QUOTES, 'UTF-8');
+    $button = htmlspecialchars($_POST['button'], ENT_QUOTES, 'UTF-8');
     switch ($button) {
-        case '商品追加':
+        case '商品追加' :
             header($GLOBALS['insert']);
+            break;
+        case '商品削除' :
+            header($GLOBALS['delete']);
             break;
     }
 }
